@@ -1,9 +1,23 @@
 {
-  "name": "@common-okurr/eslint",
+  "name": "@common-jerry/eslint",
   "version": "1.0.1",
   "description": "Common eslint",
   "main": "index.js",
   "author": "Jerry",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jareechang/Utilities.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Jareechang/Utilities/issues"
+  },
+  "homepage": "https://github.com/Jareechang/Utilities#readme",
+  "devDependencies": {
+    "eslint-config-airbnb": "^18.0.1"
+  }
 }
