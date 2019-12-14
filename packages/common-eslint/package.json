@@ -1,13 +1,14 @@
 {
   "name": "@common-web/eslint",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Common eslint",
   "main": "index.js",
   "author": "Jerry",
   "license": "MIT",
   "private": false,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "patch": "npm version patch && npm publish"
   },
   "repository": {
     "type": "git",
