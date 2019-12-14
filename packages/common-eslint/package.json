@@ -1,0 +1,8 @@
+{
+  "name": "common-eslint",
+  "version": "1.0.1",
+  "description": "Common eslint",
+  "main": "index.js",
+  "author": "Jerry",
+  "license": "MIT"
+}
