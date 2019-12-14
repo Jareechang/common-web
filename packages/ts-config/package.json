@@ -1,0 +1,8 @@
+{
+  "name": "@common-web/ts-config",
+  "version": "1.0.0",
+  "description": "common TS config",
+  "main": "index.js",
+  "author": "Jerry",
+  "license": "MIT"
+}
