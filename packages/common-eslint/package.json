@@ -1,8 +1,9 @@
 {
-  "name": "@common/eslint",
+  "name": "@common-okurr/eslint",
   "version": "1.0.1",
   "description": "Common eslint",
   "main": "index.js",
   "author": "Jerry",
-  "license": "MIT"
+  "license": "MIT",
+  "private": false
 }
