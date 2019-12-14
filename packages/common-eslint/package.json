@@ -1,5 +1,5 @@
 {
-  "name": "@common-jerry/eslint",
+  "name": "@common-web/eslint",
   "version": "1.0.1",
   "description": "Common eslint",
   "main": "index.js",
