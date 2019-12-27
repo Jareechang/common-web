@@ -1,5 +1,5 @@
 import babel from 'rollup-plugin-babel';
-import eslint from 'rollup-plugin-eslint';
+import { eslint } from 'rollup-plugin-eslint';
 import typescript from '@rollup/plugin-typescript';
 
 export type Maybe<T> = T | null;

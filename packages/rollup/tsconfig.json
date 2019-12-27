@@ -1,15 +1,14 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "target": "es6",
     "baseUrl": ".",
     "rootDir": "./src",
     "outDir": "dist",
     "sourceMap": false,
-    "moduleResolution": "node",
     "noEmitOnError": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
+    "esModuleInterop": true,
     "allowJs": true,
     "declaration": true
   },
