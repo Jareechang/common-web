@@ -1,0 +1,16 @@
+{
+  "name": "@common-web/rollup",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "author": "Jerry Chang",
+  "license": "MIT",
+  "scripts": {
+    "build": "rm -rf dist && tsc"
+  },
+  "dependencies": {
+    "@rollup/plugin-typescript": "^2.0.1",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-eslint": "^7.0.0",
+    "typescript": "^3.7.4"
+  }
+}
