@@ -1,6 +1,7 @@
 import babel from 'rollup-plugin-babel';
 import { eslint } from 'rollup-plugin-eslint';
 import typescript from '@rollup/plugin-typescript';
+import json from '@rollup/plugin-json';
 
 export type Maybe<T> = T | null;
 export type SupportedConfigTypes = string | boolean | number
@@ -37,6 +38,16 @@ export function fetchPluginWithOpts(
     return config ? plugin(config) : plugin();
 }
 
+export function getJsonPlugin(
+    opts: CustomRollupPluginConfig
+) : any {
+    return fetchPluginWithOpts(
+        json,
+        opts,
+        'json'
+    );
+}
+
 export function getEslintPlugin(
     opts: CustomRollupPluginConfig
 ) : any {
@@ -71,6 +82,7 @@ export function getBaseRollupPlugins(
     opts: CustomRollupPluginConfig
 ) : Array<any> {
     return [
+        getJsonPlugin(opts),
         getEslintPlugin(opts),
         getTsPlugin(opts),
         getBabelPlugin(opts)

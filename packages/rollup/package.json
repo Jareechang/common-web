@@ -1,14 +1,16 @@
 {
   "name": "@common-web/rollup",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "main": "dist/index.js",
   "author": "Jerry Chang",
   "license": "MIT",
   "scripts": {
+    "prepatch": "yarn run build",
     "patch": "npm version patch && npm publish",
     "build": "rm -rf dist && tsc"
   },
   "dependencies": {
+    "@rollup/plugin-json": "^4.0.1",
     "@rollup/plugin-typescript": "^2.0.1",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-eslint": "^7.0.0",
