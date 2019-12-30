@@ -6,7 +6,7 @@ Just install and use.
 
 ## Getting started
 
-Install the pkg:
+1. Install the pkg:
 
 **yarn:**
 ```js
@@ -17,6 +17,21 @@ yarn add @common-web/rollup -D
 
 ```js
 npm install @common-web/rollup --save-dev
+```
+
+2. Add scripts to your package.json
+
+```json
+scripts: {
+    "ts-check": "tsc --noEmit",
+    "build": "ts-check && rollup -c"
+}
+```
+
+3. Run the build
+```sh
+yarn run build
+
 ```
 
 **Base plugin support:**
@@ -72,3 +87,7 @@ const plugins = getBaseRollupPlugins({
 ]);
 
 ```
+
+### Examples 
+
+- Building small TS util lib [common-web-rollup-example](https://github.com/Jareechang/common-web-rollup-example)
