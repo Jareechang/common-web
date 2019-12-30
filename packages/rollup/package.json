@@ -10,8 +10,10 @@
     "build": "rm -rf dist && tsc"
   },
   "dependencies": {
+    "@babel/core": "^7.7.7",
     "@rollup/plugin-json": "^4.0.1",
     "@rollup/plugin-typescript": "^2.0.1",
+    "rollup": "^1.27.14",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-eslint": "^7.0.0",
     "typescript": "^3.7.4"
