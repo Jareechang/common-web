@@ -52,7 +52,7 @@ import { getBaseRollupPlugins } from '@common-web/rollup';
 
 const plugins = getBaseRollupPlugins({
     // eslint: { baseConfig: require('./eslintrc.js') } if you are using `eslintrc.js`
-}).conat([
+}).concat([
     // Include your own plugins to support other features 
 ]);
 
