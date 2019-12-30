@@ -1,6 +1,6 @@
 {
   "name": "@common-web/babel",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Common configuration for babel",
   "main": "babel.config.js",
   "license": "MIT",
