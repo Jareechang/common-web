@@ -90,4 +90,5 @@ const plugins = getBaseRollupPlugins({
 
 ### Examples 
 
-- Building small TS util lib [common-web-rollup-example](https://github.com/Jareechang/common-web-rollup-example)
+- [TS util lib Example](https://github.com/Jareechang/common-web-rollup-example)
+- [Modern Express API Example](https://github.com/Jareechang/common-web-modern-express)
