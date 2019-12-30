@@ -26,7 +26,7 @@ const BasePrettierConfig = require('@common-web/prettier');
 module.exports = BasePrettierConfig;
 ```
 
-## Running TSC 
+## Running Prettier
 
 Add the following to your "scripts" in your `package.json`
 
