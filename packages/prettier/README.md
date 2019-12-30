@@ -45,8 +45,11 @@ Add the following to your "scripts" in your `package.json`
 
 
 ```sh
-// By default, tsc will pick up your tsconfig.json
-prettier --write
+yarn run prettier
+
+or
+
+npm run prettier
 ```
 
 ## Examples
