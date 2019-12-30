@@ -1,6 +1,6 @@
 {
   "name": "@common-web/prettier",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Prettier config",
   "main": "src/index.js",
   "author": "Jerry Chang",
