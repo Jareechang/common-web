@@ -1,0 +1,16 @@
+{
+  "name": "@common-web/prettier",
+  "version": "1.0.0",
+  "description": "Prettier config",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "Jerry Chang",
+  "license": "MIT",
+  "scripts": {
+    "patch": "yarn run build && npm version patch && npm publish",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^3.7.4"
+  }
+}
