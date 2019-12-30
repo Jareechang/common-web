@@ -10,21 +10,25 @@ export interface ConfigMap<T> {
     [key: string]: T;
 }
 
+export interface CustomPluginConfig {
+    disabled: boolean;
+    // ...and other configs
+}
+
 export interface CustomRollupPluginConfig {
     eslint: ConfigMap<SupportedConfigTypes>;
     babel: ConfigMap<SupportedConfigTypes>;
     typescript: ConfigMap<SupportedConfigTypes>;
 }
 
-function selectOpts(
+function selectOpts<T>(
     opts: CustomRollupPluginConfig,
     key: string,
-    defaultReturn: any = null 
-) : Maybe<string> {
+    defaultReturn: any = {}
+) : ConfigMap<T> {
     if (opts && typeof opts === 'object') {
         return opts[key] || defaultReturn;
     }
-
     return defaultReturn;
 }
 
@@ -34,7 +38,7 @@ export function fetchPluginWithOpts(
     key: string
 ) : any {
     if (!plugin) throw new Error('fetchPluginWithOpts() -> plugin is required');
-    const config = selectOpts(opts, key, {});
+    const config = selectOpts<CustomPluginConfig>(opts, key, {});
     const isDisabled = config.disabled || false;
     if (isDisabled) return;
     return config ? plugin(config) : plugin();

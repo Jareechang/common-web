@@ -7,6 +7,7 @@
   "scripts": {
     "prepatch": "yarn run build",
     "patch": "npm version patch && npm publish",
+    "ts-check": "tsc --noEmit",
     "build": "rm -rf dist && tsc"
   },
   "dependencies": {
