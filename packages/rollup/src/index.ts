@@ -4,7 +4,7 @@ import typescript from '@rollup/plugin-typescript';
 import json from '@rollup/plugin-json';
 
 export type Maybe<T> = T | null;
-export type SupportedConfigTypes = string | boolean | number
+export type SupportedConfigTypes = string | boolean | number;
 
 export interface ConfigMap<T> {
     [key: string]: T;
@@ -34,7 +34,9 @@ export function fetchPluginWithOpts(
     key: string
 ) : any {
     if (!plugin) throw new Error('fetchPluginWithOpts() -> plugin is required');
-    const config = selectOpts(opts, key);
+    const config = selectOpts(opts, key, {});
+    const isDisabled = config.disabled || false;
+    if (isDisabled) return;
     return config ? plugin(config) : plugin();
 }
 
