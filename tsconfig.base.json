@@ -13,6 +13,7 @@
     "strict": true,
     "pretty": true,
     "jsx": "react",
+    "esModuleInterop": true,
     "suppressImplicitAnyIndexErrors": true,
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node",
