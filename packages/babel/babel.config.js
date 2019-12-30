@@ -5,7 +5,23 @@ const commonPresets = [
     '@babel/preset-react',
 
     // TS support
-    '@babel/preset-typecript',
+    '@babel/preset-typescript'
+];
+
+const commonNodePresets = [
+    [
+        '@babel/preset-env',
+        {
+            targets: { node: 'current' },
+            include: ['transform-arrow-functions'],
+            modules: false
+        }
+    ],
+    // React support
+    '@babel/preset-react',
+
+    // TS support
+    '@babel/preset-typecript'
 ];
 
 const commonPlugins = [
@@ -14,7 +30,7 @@ const commonPlugins = [
     *
     *   Support decorators
     */
-    '@babel/plugin-proposal-decorators',
+    ['@babel/plugin-proposal-decorators', { legacy: true }],
 
     /**
     *   link: https://babeljs.io/docs/en/babel-plugin-proposal-function-bind
@@ -28,17 +44,17 @@ const commonPlugins = [
     *
     *   Support arrow functions in class 
     */
-    '@babel/plugin-proposal-class-properties'
-    ['@babel/plugin-transform-classes', {'loose': true}]
+    '@babel/plugin-proposal-class-properties',
+    ['@babel/plugin-transform-classes', {'loose': true}],
 
     /**
     *   link: https://babeljs.io/docs/en/babel-plugin-syntax-optional-chaining 
     *
     *   Support optional chaining -> a?.b
     */
-    '@babel/plugin-proposal-optional-chaining'
+    '@babel/plugin-proposal-optional-chaining',
 
-    ['@babel/plugin-proposal-export-default-from', { 'legacy': true }]
+    ['@babel/plugin-proposal-export-default-from', { 'legacy': true }],
 
     /**
     *   link: https://babeljs.io/docs/en/babel-plugin-transform-proto-to-assign 
@@ -49,15 +65,15 @@ const commonPlugins = [
     ['@babel/plugin-transform-runtime']
 ];
 
-module.exports = function (presets, plugins) {
+function getBaseConfig(presetsOverride = [], pluginsOverride = []) {
   const presets = [
       ...commonPresets,
-      ...presets
+      ...presetsOverride
   ];
 
   const plugins = [
       ...commonPlugins,
-      ...plugins
+      ...pluginsOverride
   ];
 
   return {
@@ -65,3 +81,23 @@ module.exports = function (presets, plugins) {
     plugins
   };
 };
+
+function getNodeBaseConfig(presetsOverride = [], pluginsOverride = []) {
+  const presets = [
+      ...commonPresets,
+      ...presetsOverride
+  ];
+
+  const plugins = [
+      ...commonPlugins,
+      ...pluginsOverride
+  ];
+
+  return {
+    presets,
+    plugins
+  };
+};
+
+exports.getBaseConfig = getBaseConfig;
+exports.getNodeBaseConfig = getNodeBaseConfig;
