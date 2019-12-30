@@ -48,3 +48,7 @@ Add the following to your "scripts" in your `package.json`
 // By default, tsc will pick up your tsconfig.json
 prettier --write
 ```
+
+## Examples
+
+- [@common-web Rollup/ Prettier example](https://github.com/Jareechang/common-web-rollup-example)
