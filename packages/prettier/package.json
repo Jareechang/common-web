@@ -1,6 +1,6 @@
 {
   "name": "@common-web/prettier",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Prettier config",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -11,6 +11,7 @@
     "build": "tsc"
   },
   "devDependencies": {
+    "prettier": "^1.19.1",
     "typescript": "^3.7.4"
   }
 }
