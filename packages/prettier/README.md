@@ -30,6 +30,19 @@ module.exports = BasePrettierConfig;
 
 Add the following to your "scripts" in your `package.json`
 
+```json
+
+{
+    ...,
+
+    "scripts": {
+        "prettier --write -l \"src/**/*.ts\
+    }
+}
+```
+
+**Note:** Feel free change the 'src' and file pattern matching to suit your needs 
+
 
 ```sh
 // By default, tsc will pick up your tsconfig.json
