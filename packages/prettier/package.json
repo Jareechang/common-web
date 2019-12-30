@@ -6,8 +6,7 @@
   "author": "Jerry Chang",
   "license": "MIT",
   "scripts": {
-    "patch": "yarn run build && npm version patch && npm publish",
-    "build": "tsc"
+    "patch": "npm version patch && npm publish"
   },
   "devDependencies": {
     "prettier": "^1.19.1"
