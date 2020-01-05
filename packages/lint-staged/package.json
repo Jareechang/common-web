@@ -1,6 +1,6 @@
 {
   "name": "@common-web/lint-staged",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Common Lint staged config",
   "main": "index.js",
   "author": "Jerry Chang",
