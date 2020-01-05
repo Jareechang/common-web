@@ -1,3 +1,4 @@
 module.exports = {
-    "*.ts?x": ["tsc -p tsconfig.json --noEmit", "prettier --write", "git add"]
+    "*.{ts, js, tsx}": ["prettier --write", "git add"],
+    '**/*.ts?(x)': () => 'tsc -p tsconfig.json --noEmit'
 };
