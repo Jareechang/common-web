@@ -10,3 +10,4 @@
 |  rollup |  [@common-web/rollup](https://github.com/Jareechang/common-web/tree/master/packages/rollup) | [![Version](https://img.shields.io/npm/v/@common-web/rollup.svg)](https://www.npmjs.com/package/@common-web/rollup)  |
 |  prettier |  [@common-web/prettier](https://github.com/Jareechang/common-web/tree/master/packages/prettier) | [![Version](https://img.shields.io/npm/v/@common-web/prettier.svg)](https://www.npmjs.com/package/@common-web/prettier)  |
 |  lint-staged |  [@common-web/lint-staged](https://github.com/Jareechang/common-web/tree/master/packages/lint-staged) | [![Version](https://img.shields.io/npm/v/@common-web/prettier.svg)](https://www.npmjs.com/package/@common-web/lint-staged)  |
+|  jest |  [@common-web/jest](https://github.com/Jareechang/common-web/tree/master/packages/jest) | [![Version](https://img.shields.io/npm/v/@common-web/jest.svg)](https://www.npmjs.com/package/@common-web/jest)  |
