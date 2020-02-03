@@ -1,0 +1,11 @@
+{
+  "name": "@common-web/jest",
+  "version": "1.0.0",
+  "description": "Common jest configuration",
+  "scripts": {
+    "patch": "npm version patch && npm publish"
+  },
+  "main": "jest.config.js",
+  "author": "Jerry Chang",
+  "license": "MIT"
+}
