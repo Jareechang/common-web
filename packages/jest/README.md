@@ -1,3 +1,12 @@
+## Common jest config 
+
+Supports typescript and modern es6 features out of the box in test code base, using the transformers:
+
+- [ts-jest](https://github.com/kulshekhar/ts-jest)
+- [babel-jest](https://github.com/facebook/jest/tree/master/packages/babel-jest)
+
+the configuration defaults to looking for test files in the **src/** folder under **__tests__**
+
 ## Getting started
 
 Install the pkg:
@@ -17,6 +26,23 @@ in your repo create `jest.config.js` file with the following code:
 
 ```js
 const commonConfig = require('@common-web/jest');
+
+module.exports = commonConfig;
+```
+
+**Changing common configurations, if you need to change paths or ignore certain files:**
+
+```js
+const commonConfig = require('@common-web/jest');
+
+// Defines the "src" of the test files
+process.env.COMMON_JEST_ROOT = 'my/new/root';
+
+// Support additional extensions in your application 
+process.env.COMMON_JEST_FILE_EXTENSIONS = 'svg';
+
+// Add additional ignore patterns
+process.env.COMMON_JEST_IGNORE_PATTERNS = 'dist/**';
 
 module.exports = commonConfig;
 ```
