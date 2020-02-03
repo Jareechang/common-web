@@ -36,9 +36,9 @@ module.exports = {
 
     coveragePathIgnorePatterns: [
         'node_modules'
-    ].concat(stringToArrayConf(ignorePatterns)),
+    ].concat(stringToArrayConfig(ignorePatterns)),
 
     transformIgnorePatterns: [
         'node_modules'
-    ].concat(stringToArrayConf(ignorePatterns)),
+    ].concat(stringToArrayConfig(ignorePatterns)),
 };
