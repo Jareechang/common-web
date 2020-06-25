@@ -4,5 +4,8 @@
   "description": "common TS config",
   "main": "index.js",
   "author": "Jerry",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^3.9.5"
+  }
 }
