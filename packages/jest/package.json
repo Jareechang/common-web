@@ -1,6 +1,6 @@
 {
   "name": "@common-web/jest",
-  "version": "1.0.4",
+  "version": "1.0.7",
   "description": "Common jest configuration",
   "scripts": {
     "patch": "npm version patch && npm publish"
