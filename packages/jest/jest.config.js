@@ -4,7 +4,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 const ignorePatterns = process.env.COMMON_JEST_IGNORE_PATTERNS || '';
 
 function stringToArrayConfig(config) {
-    if (typeof config === 'string') return config.split(',');
+    if (config && typeof config === 'string') return config.split(',');
 
     return [];
 }
