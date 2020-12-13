@@ -1,6 +1,6 @@
 {
   "name": "@common-web/ts-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "common TS config",
   "main": "index.js",
   "author": "Jerry",
