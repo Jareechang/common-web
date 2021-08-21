@@ -1,0 +1,14 @@
+{
+  "name": "@common-web/esbuild",
+  "version": "1.0.1",
+  "main": "src/index.js",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {
+    "esbuild": "^0.12.22",
+    "lodash": "^4.17.21"
+  },
+  "bin": {
+    "esbuild-ts": "./cli.js"
+  }
+}
