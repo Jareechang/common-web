@@ -6,7 +6,7 @@ function getBaseConfig(options = {}) {
   // Use current execution path if 'rootDir' not supplied
   const rootDir = _.get(options, 'rootDir', process.cwd());
   const entryPoint = _.get(options, 'entryPoint', './src/index.tsx');
-  const outFile = _.get(options, 'outFile', './dist/index.js');
+  const outfile = _.get(options, 'outfile', './dist/index.js');
   const format = _.get(options, 'format', 'cjs');
   const platform = _.get(options, 'platform', 'node');
   const target = _.get(options, 'target', 'es2015');
