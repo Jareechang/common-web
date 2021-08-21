@@ -28,7 +28,7 @@ function getBaseConfig(options = {}) {
       tsconfig
     ),
     plugins: [
-      nodeExternalsPlugin(),
+      customPlugins.nodeExternalsPlugin(),
       ...plugins
     ],
     target,
