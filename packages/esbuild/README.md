@@ -3,6 +3,7 @@
 Using `esbuild` to transpile typescript scripts.
 
 - [Why](#why)
+- [Requirements](#requirements)
 - [Getting Started](#getting-started)
 - [Running the build](#running-the-build)
 - [Configuration Options](#configuration-options)
@@ -28,6 +29,10 @@ This package comes with all the configuration on esbuild out of the box to get u
 - You are writing simple node server in `typescript` you need to transpile to `cjs`
 - You are writing npm package with utility scripts in `typescript` you need to transpile to `cjs`
 - etc...
+
+## Requirements
+
+Requires `node >= 12.x` due to `yargs`.
 
 ## Getting started
 
