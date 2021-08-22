@@ -84,7 +84,7 @@ yarn build
 
 ## Configurable option
 | name  | description  |  defaults | cli configurable  | data type |
-|---|---|---|---|
+|---|---|---|---|---|
 | rootDir | working or root directory |  current working directory |  y  | string | 
 | entryPoint | entry path for the build (relative to rootDir)|  ./src/index.ts |  y  | string |
 | outfile | output path for the build (relative to rootDir)|  ./dist/index.js |  y  | string|
