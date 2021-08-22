@@ -4,16 +4,8 @@ Using `esbuild` to transpile typescript scripts.
 
 - [Getting Started](#getting-started)
 - [Running the build](#running-the-build)
+- [Configurable Options](#configurable-options)
 - [Caveats](#caveats)
-
-## Caveats 
-
-depending on projects, some features from modern ES and typescript may be mussing. Please see:
-
-- [esbuild#javascript-caveats](https://esbuild.github.io/content-types/#javascript-caveats)
-- [esbuild#typescript-caveats](https://esbuild.github.io/content-types/#typescript-caveats)
-
-Please review the [esbuild](https://esbuild.github.io/) documentation for more options and information.
 
 ## Getting started
 
@@ -36,7 +28,11 @@ npm install @common-web/esbuild --save-dev
 1. Directly run the cli
 
 ```sh
-npx esbuild-ts 
+// simple build
+npx esbuild-ts
+
+// Change path
+npx esbuild-ts --entryPoint=./path-to-my-entry --outfile=./path-to-my-outfile
 ```
 
 2. Use the common config file
@@ -85,3 +81,30 @@ esbuild.build(
 ```sh
 yarn build
 ```
+
+## Configurable option
+| name  | description  |  defaults | cli configurable  | data type |
+|---|---|---|---|
+| rootDir | working or root directory |  current working directory |  y  | string | 
+| entryPoint | entry path for the build (relative to rootDir)|  ./src/index.ts |  y  | string |
+| outfile | output path for the build (relative to rootDir)|  ./dist/index.js |  y  | string|
+| format | format of the build output |  cjs |  y  | string |
+| platform | platform for the build output |  node |  y  | string |
+| target | target for the build output |  es2015 |  y  | string |
+| plugins | additional esbuild plugins |  [] |  n  | array |
+| tsconfig | path to tsconfig |  ./tsconfig.json |  y  | string |
+| override | additional override options on esbuild |  {} |  n  | object |
+
+**More options:**
+
+- see [esbuild#simple-options](https://esbuild.github.io/api/#simple-options)
+- see [esbuild#advcaned-options](https://esbuild.github.io/api/#advanced-options)
+
+## Caveats 
+
+depending on projects, some features from modern ES and typescript may be mussing. Please see:
+
+- [esbuild#javascript-caveats](https://esbuild.github.io/content-types/#javascript-caveats)
+- [esbuild#typescript-caveats](https://esbuild.github.io/content-types/#typescript-caveats)
+
+Please review the [esbuild](https://esbuild.github.io/) documentation for more options and information.
