@@ -2,10 +2,25 @@
 
 Using `esbuild` to transpile typescript scripts.
 
+- [Why](#why)
 - [Getting Started](#getting-started)
 - [Running the build](#running-the-build)
 - [Configurable Options](#configurable-options)
 - [Caveats](#caveats)
+
+## Why
+
+Why not use `esbuild` directly. You can use it directly but for typescript projects you’d need additional setup like
+handling resolution of external `node_modules` and other options like `format`, `target`, `platform`.
+
+**This might be for you if:**
+
+- You are creating scripts or servers on node
+- You need to output `cjs`
+- You need to target `es2015` syntax
+
+This package comes with all the configuration on esbuild out of the box to get up and running without going through the docs and figuring out what options are needed.
+
 
 ## Getting started
 
