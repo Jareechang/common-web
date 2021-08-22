@@ -57,6 +57,8 @@ npx esbuild-ts
 npx esbuild-ts --entryPoint=./path-to-my-entry --outfile=./path-to-my-outfile
 ```
 
+For more options see below [Configurable Options](#configurable-options)
+
 2. Use the common config file
 
 **Creating build.js file:**
