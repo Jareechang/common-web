@@ -19,8 +19,7 @@ const argOptions = [
   'tsconfig'
 ];
 
-const esbuildOptions = argOptions.map(key
-  => ({
+const esbuildOptions = argOptions.map(key => ({
     [key]: argv[key]
   })
 );
