@@ -21,6 +21,11 @@ handling resolution of external `node_modules` and other options like `format`, 
 
 This package comes with all the configuration on esbuild out of the box to get up and running without going through the docs and figuring out what options are needed.
 
+**Typical uses:**
+
+- You are writing simple node server in `typescript` you need to transpile to `cjs`
+- You are writing npm package with utility scripts in `typescript` you need to transpile to `cjs`
+- etc...
 
 ## Getting started
 
