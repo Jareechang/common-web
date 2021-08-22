@@ -10,7 +10,9 @@ Using `esbuild` to transpile typescript scripts.
 
 ## Why
 
-Why not use `esbuild` directly. You can use it directly but for typescript projects you’d need additional setup like
+**Why not use `esbuild` directly ?**
+
+You can use it directly but for typescript projects you’d need additional setup like
 handling resolution of external `node_modules` and other options like `format`, `target`, `platform`.
 
 **This might be for you if:**
@@ -122,7 +124,7 @@ yarn build
 
 ## Caveats 
 
-depending on projects, some features from modern ES and typescript may be mussing. Please see:
+depending on projects, some features from modern ES and typescript may be missing. Please see:
 
 - [esbuild#javascript-caveats](https://esbuild.github.io/content-types/#javascript-caveats)
 - [esbuild#typescript-caveats](https://esbuild.github.io/content-types/#typescript-caveats)
