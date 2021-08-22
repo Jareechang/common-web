@@ -13,7 +13,7 @@ function getBaseConfig(options = {}) {
   const plugins = _.get(options, 'plugins', []);
   const tsconfig = _.get(options, 'tsconfig', './tsconfig.json');
   const override = _.get(options, 'override', {});
-  const baseConfig = {
+  return {
     entryPoints: [
       path.join(
         rootDir,
