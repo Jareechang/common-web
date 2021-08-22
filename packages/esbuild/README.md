@@ -5,7 +5,7 @@ Using `esbuild` to transpile typescript scripts.
 - [Why](#why)
 - [Getting Started](#getting-started)
 - [Running the build](#running-the-build)
-- [Configurable Options](#configurable-options)
+- [Configuration Options](#configuration-options)
 - [Caveats](#caveats)
 
 ## Why
@@ -57,7 +57,7 @@ npx esbuild-ts
 npx esbuild-ts --entryPoint=./path-to-my-entry --outfile=./path-to-my-outfile
 ```
 
-For more options see below [Configurable Options](#configurable-options)
+For more options see below [Configuration Options](#configuration-options)
 
 2. Use the common config file
 
@@ -106,7 +106,7 @@ esbuild.build(
 yarn build
 ```
 
-## Configurable option
+## Configuration options
 | name  | description  |  defaults | cli configurable  | data type |
 |---|---|---|---|---|
 | rootDir | working or root directory |  current working directory |  y  | string | 
