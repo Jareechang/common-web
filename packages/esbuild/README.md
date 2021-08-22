@@ -70,20 +70,19 @@ For more options see below [Configuration Options](#configuration-options)
 ```js
 // build.js
 
-const commonEsbuild = require('@common-web/esbuild');
+const config = require('@common-web/esbuild');
 const esbuild = require('esbuild');
 const path = require('path');
 
 // Simple
-esbuild.build(
-    esbuild.getBaseConfig()
-).then(() => {
-  console.log('Build finished');
-});
+esbuild.build(config.getBaseConfig())
+  .then(() => {
+      console.log('Build finished');
+  });
 
 // Advanced (optional)
 esbuild.build(
-    esbuild.getBaseConfig({
+    config.getBaseConfig({
       entryPoint: './my-custom-entry-file',
       outfile: './my-custom-out-file',
       plugins: [myCustomPlugin()],
