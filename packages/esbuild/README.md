@@ -132,9 +132,17 @@ yarn build
 
 ## Caveats 
 
-depending on projects, some features from modern ES and typescript may be missing. Please see:
-
-- [esbuild#javascript-caveats](https://esbuild.github.io/content-types/#javascript-caveats)
-- [esbuild#typescript-caveats](https://esbuild.github.io/content-types/#typescript-caveats)
+- depending on projects, some features from modern ES and typescript may be missing. Please see:  
+  - [esbuild#javascript-caveats](https://esbuild.github.io/content-types/#javascript-caveats)  
+  - [esbuild#typescript-caveats](https://esbuild.github.io/content-types/#typescript-caveats)  
+- No typescript typechecking (types are stripped from the build process in `esbuild`)
+  - [esbuild#typescript-caveats](https://esbuild.github.io/content-types/#typescript-caveats)  
 
 Please review the [esbuild](https://esbuild.github.io/) documentation for more options and information.
+
+## Examples
+
+#### Bundling example (full node web app)
+- [lightbnb](https://github.com/Jareechang/lightbnb) (Bundling example - node web app)
+- [express-ts-esbuild](https://github.com/Jareechang/express-ts-esbuild) (simple example - one entry only)
+- [node library]() (TODO - to be added)
