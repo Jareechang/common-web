@@ -4,7 +4,17 @@ const esbuild = require('esbuild');
 const config = require('./src');
 const yargs = require('yargs');
 const { hideBin } = require('yargs/helpers')
-const argv = yargs(hideBin(process.argv)).argv
+
+const parseArray = (arg) => {
+  if (!!arg.match(',')) {
+    return arg.split(',');
+  }
+  return arg;
+}
+
+const argv = yargs(hideBin(process.argv))
+  .coerce(['external', 'target'], parseArray)
+  .argv
 
 console.time('[cli] esbuild');
 
@@ -16,11 +26,15 @@ const argOptions = [
   'format',
   'platform',
   'target',
-  'tsconfig'
+  'tsconfig',
+  'bundle',
+  'external',
 ];
 
 const esbuildOptions = argOptions.reduce((acc, key) => {
-  acc[key] = argv[key];
+  if (argv[key]) {
+    acc[key] = argv[key];
+  }
   return acc;
 }, {});
 

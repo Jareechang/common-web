@@ -122,6 +122,8 @@ yarn build
 | plugins | additional esbuild plugins |  [] |  n  | array |
 | tsconfig | path to tsconfig |  ./tsconfig.json |  y  | string |
 | override | additional override options on esbuild |  {} |  n  | object |
+| bundle | bundle the files |  false |  y  | bolean |
+| external | external files to exclude from final bundle |  [] |  y  | string[] |
 
 **More options:**
 

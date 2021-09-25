@@ -13,6 +13,8 @@ function getBaseConfig(options = {}) {
   const plugins = _.get(options, 'plugins', []);
   const tsconfig = _.get(options, 'tsconfig', './tsconfig.json');
   const override = _.get(options, 'override', {});
+  const bundle = _.get(options, 'bundle', false);
+  const external = _.get(options, 'external', []);
   return {
     entryPoints: [
       path.join(
@@ -31,6 +33,8 @@ function getBaseConfig(options = {}) {
       customPlugins.nodeExternalsPlugin(),
       ...plugins
     ],
+    bundle,
+    external,
     target,
     ...override
   };
