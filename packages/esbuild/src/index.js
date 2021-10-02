@@ -41,7 +41,7 @@ function getBaseConfig(options = {}) {
   };
 
   // Replace entry points
-  if (entryPoints.length > 1) {
+  if (entryPoints.length > 0) {
     config.entryPoints = entryPoints;
   }
 

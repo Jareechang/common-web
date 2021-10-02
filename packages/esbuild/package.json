@@ -1,6 +1,6 @@
 {
   "name": "@common-web/esbuild",
-  "version": "1.0.20",
+  "version": "1.0.21",
   "main": "src/index.js",
   "license": "MIT",
   "devDependencies": {},
@@ -10,8 +10,8 @@
     "yargs": "^17.1.1"
   },
   "repository": {
-    "url" : "https://github.com/Jareechang/common-web/tree/master/packages/esbuild",
-    "email" : "therealjerrycan@gmail.com"
+    "url": "https://github.com/Jareechang/common-web/tree/master/packages/esbuild",
+    "email": "therealjerrycan@gmail.com"
   },
   "scripts": {
     "patch": "npm version patch && npm publish"
