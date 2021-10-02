@@ -32,7 +32,7 @@ function getBaseConfig(options = {}) {
     ),
     plugins: (
       platform === 'node'
-      ? [customPlugins.nodeExternalsPlugin()],
+      ? [customPlugins.nodeExternalsPlugin()]
       : []
     ).concat(plugins),
     bundle,
