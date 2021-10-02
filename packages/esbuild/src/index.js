@@ -30,10 +30,11 @@ function getBaseConfig(options = {}) {
       rootDir,
       tsconfig
     ),
-    plugins: [
-      customPlugins.nodeExternalsPlugin(),
-      ...plugins
-    ],
+    plugins: (
+      platform === 'node'
+      ? [customPlugins.nodeExternalsPlugin()],
+      : []
+    ).concat(plugins),
     bundle,
     external,
     target,
