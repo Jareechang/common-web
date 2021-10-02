@@ -1,21 +1,22 @@
 const path = require('path');
 const customPlugins = require('./plugins');
-const _ = require('lodash');
+const get = require('lodash.get');
 
 function getBaseConfig(options = {}) {
+  const entryPoint = get(options, 'entryPoint', './src/index.ts');
+  const entryPoints = get(options, 'entryPoints', []);
   // Use current execution path if 'rootDir' not supplied
-  const rootDir = _.get(options, 'rootDir', process.cwd());
-  const entryPoint = _.get(options, 'entryPoint', './src/index.ts');
-  const outfile = _.get(options, 'outfile', './dist/index.js');
-  const format = _.get(options, 'format', 'cjs');
-  const platform = _.get(options, 'platform', 'node');
-  const target = _.get(options, 'target', 'es2015');
-  const plugins = _.get(options, 'plugins', []);
-  const tsconfig = _.get(options, 'tsconfig', './tsconfig.json');
-  const override = _.get(options, 'override', {});
-  const bundle = _.get(options, 'bundle', false);
-  const external = _.get(options, 'external', []);
-  return {
+  const rootDir = get(options, 'rootDir', process.cwd());
+  const outfile = get(options, 'outfile', './dist/index.js');
+  const format = get(options, 'format', 'cjs');
+  const platform = get(options, 'platform', 'node');
+  const target = get(options, 'target', 'es2015');
+  const plugins = get(options, 'plugins', []);
+  const tsconfig = get(options, 'tsconfig', './tsconfig.json');
+  const override = get(options, 'override', {});
+  const bundle = get(options, 'bundle', false);
+  const external = get(options, 'external', []);
+  const config = {
     entryPoints: [
       path.join(
         rootDir,
@@ -38,6 +39,13 @@ function getBaseConfig(options = {}) {
     target,
     ...override
   };
+
+  // Replace entry points
+  if (entryPoints.length > 1) {
+    config.entryPoints = entryPoints;
+  }
+
+  return config;
 }
 
 module.exports = {
