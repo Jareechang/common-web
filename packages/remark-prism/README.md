@@ -1,5 +1,8 @@
 # remark-prism
 
+Forked of [remark-prism](https://github.com/sergioramos/remark-prism) with few changes:
+- Tweak to support inline-code highlighting
+
 Syntax highlighter for markdown code blocks using [Prism](https://prismjs.com/) - with support for certain [plugins](https://prismjs.com/plugins/). This allows syntax highlighting without running any client-side code - other than CSS.
 
 <div align="center">
@@ -7,14 +10,10 @@ Syntax highlighter for markdown code blocks using [Prism](https://prismjs.com/) 
 </div>
 
 
-Forked of [remark-prism](https://github.com/sergioramos/remark-prism) with few changes:
-
-- Tweak to support inline-code highlighting
-
 ## installation
 
 ```bash
-λ yarn add remark-prism
+λ yarn add @common-web/remark-prism
 ```
 
 ## usage
