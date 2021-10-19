@@ -1,9 +1,12 @@
 {
-  "name": "remark-prism",
-  "version": "1.1.15",
+  "name": "@common-web/remark-prism",
+  "version": "1.1.16",
   "description": "Syntax highlighter for markdown code blocks - with support for plugins",
   "license": "BSD-3-Clause",
-  "repository": "sergioramos/remark-prism",
+  "repository": {
+    "url": "https://github.com/Jareechang/common-web/tree/master/packages/remark-prism",
+    "email": "therealjerrycan@gmail.com"
+  },
   "main": "index.js",
   "keywords": [
     "prismjs",
@@ -12,10 +15,6 @@
     "remarkjs",
     "remark-plugin"
   ],
-  "publishConfig": {
-    "registry": "https://registry.npmjs.com",
-    "access": "public"
-  },
   "scripts": {
     "eslint": "eslint . --ext .js",
     "fmt": "prettier --config package.json --write '**/*'",
