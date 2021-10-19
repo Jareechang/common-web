@@ -12,3 +12,4 @@
 |  lint-staged |  [@common-web/lint-staged](https://github.com/Jareechang/common-web/tree/master/packages/lint-staged) | [![Version](https://img.shields.io/npm/v/@common-web/prettier.svg)](https://www.npmjs.com/package/@common-web/lint-staged)  |
 |  jest |  [@common-web/jest](https://github.com/Jareechang/common-web/tree/master/packages/jest) | [![Version](https://img.shields.io/npm/v/@common-web/jest.svg)](https://www.npmjs.com/package/@common-web/jest)  |
 |  esbuild |  [@common-web/esbuild](https://github.com/Jareechang/common-web/tree/master/packages/esbuild) | [![Version](https://img.shields.io/npm/v/@common-web/esbuild.svg)](https://www.npmjs.com/package/@common-web/esbuild)  |
+|  remark-prism |  [@common-web/remark-prism](https://github.com/Jareechang/common-web/tree/master/packages/remark-prism) | [![Version](https://img.shields.io/npm/v/@common-web/remark-prism.svg)](https://www.npmjs.com/package/@common-web/remark-prism)  |

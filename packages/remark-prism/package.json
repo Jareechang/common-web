@@ -1,0 +1,89 @@
+{
+  "name": "remark-prism",
+  "version": "1.1.15",
+  "description": "Syntax highlighter for markdown code blocks - with support for plugins",
+  "license": "BSD-3-Clause",
+  "repository": "sergioramos/remark-prism",
+  "main": "index.js",
+  "keywords": [
+    "prismjs",
+    "markdown",
+    "remark",
+    "remarkjs",
+    "remark-plugin"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.com",
+    "access": "public"
+  },
+  "scripts": {
+    "eslint": "eslint . --ext .js",
+    "fmt": "prettier --config package.json --write '**/*'",
+    "test": "NODE_ENV=test c8 -r lcovonly -r text ava --serial"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "css-selector-parser": "^1.4.1",
+    "escape-html": "^1.0.3",
+    "hast-util-to-html": "^7.1.1",
+    "hastscript": "^6.0.0",
+    "jsdom": "^16.4.0",
+    "parse-numeric-range": "^1.2.0",
+    "prismjs": "^1.21.0",
+    "unist-builder": "^2.0.3",
+    "unist-util-map": "^2.0.1"
+  },
+  "devDependencies": {
+    "ava": "^3.12.1",
+    "c8": "^7.3.1",
+    "eslint": "^7.9.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-xo-space": "^0.25.0",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
+    "mz": "^2.7.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.1.2",
+    "puppeteer": "^5.3.1",
+    "remark": "^12.0.1",
+    "remark-html": "^12.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --config package.json --write",
+      "git add"
+    ],
+    "*.*": [
+      "prettier --config package.json --write",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "bracketSpacing": true,
+    "jsxBracketSameLine": false,
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "all",
+    "useTabs": false
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "xo-space/esnext",
+      "prettier"
+    ],
+    "rules": {
+      "new-cap": 0,
+      "camelcase": 0,
+      "capitalized-comments": 0
+    }
+  }
+}
