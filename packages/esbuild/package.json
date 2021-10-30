@@ -5,7 +5,7 @@
   "license": "MIT",
   "devDependencies": {},
   "dependencies": {
-    "esbuild": "^0.12.22",
+    "esbuild": "^0.13.10",
     "lodash.get": "^4.4.2",
     "yargs": "^17.1.1"
   },
