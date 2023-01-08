@@ -1,6 +1,6 @@
 {
   "name": "@common-web/astro-lambda-edge",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "exports": {
     ".": "./dist/index.js",
@@ -22,6 +22,11 @@
   ],
   "author": "Jerry Chang",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jareechang/common-web",
+    "directory": "packages/astro-lambda-edge"
+  },
   "devDependencies": {
     "@tsconfig/esm": "^1.0.2",
     "@tsconfig/node16-strictest-esm": "^1.0.3",
