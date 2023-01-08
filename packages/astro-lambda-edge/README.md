@@ -25,7 +25,7 @@ pnpm add @common-web/astro-lambda-edge -D
 import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
 import react from "@astrojs/react";
-import lambdaAdapter from '@common-web/astro-lambda-edge';
++import lambdaAdapter from '@common-web/astro-lambda-edge';
 
 // https://astro.build/config
 export default defineConfig({

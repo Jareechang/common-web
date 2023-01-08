@@ -1,6 +1,6 @@
 {
   "name": "@common-web/astro-lambda-edge",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "exports": {
     ".": "./dist/index.js",
