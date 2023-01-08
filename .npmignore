@@ -2,3 +2,7 @@
 node_modules
 .DS_Store
 *.swp
+src
+jest.config.js
+tsconfig.json
+setupTests.js
