@@ -1,0 +1,33 @@
+{
+  "name": "@common-web/ai-tools",
+  "version": "1.0.11",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "devDependencies": {
+    "@tsconfig/node-lts": "^20.1.3",
+    "@types/node": "^20.12.7",
+    "esbuild": "^0.13.10",
+    "typescript": "^5.4.5"
+  },
+  "repository": {
+    "url": "https://github.com/Jareechang/common-web/tree/master/packages/ai-tools",
+    "email": "therealjerrycan@gmail.com"
+  },
+  "keywords": [
+    "ai",
+    "cost estimations",
+    "openai",
+    "anthropic",
+    "gpt",
+    "gtp3",
+    "gtp4",
+    "anthropic"
+  ],
+  "scripts": {
+    "build": "node ./build.js",
+    "build:types": "tsc src/index.ts --declaration --emitDeclarationOnly --outDir dist",
+    "build:prod": "npm run build && npm run build:types",
+    "patch": "npm version patch && npm publish --access public"
+  }
+}
