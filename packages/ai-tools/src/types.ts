@@ -52,7 +52,7 @@ export interface ICostEstimation {
   }
 }
 
-export interface ICostEstimationParameters {
+export interface IPromptMethodParameters {
   /**
    * The prompt to be analyzed
    * */
@@ -65,4 +65,69 @@ export interface ICostEstimationParameters {
    * provide a custom endpoint
    * */
   endpoint?: string;
+}
+
+export interface IChunkTextMethodParameters {
+  /**
+   * The text to be procesesed or chunked
+   * */
+  text: string;
+  /**
+   *
+   * sections to be split on
+   * */
+  splitOn?: Array<string[]>;
+  /**
+   * provide a custom endpoint
+   * */
+  endpoint?: string;
+}
+
+export type TEntityTypes =
+  | 'PERSON'
+  | 'NORP'
+  | 'FAC'
+  | 'ORG'
+  | 'GPE'
+  | 'LOC'
+  | 'PRODUCT'
+  | 'EVENT'
+  | 'WORK_OF_ART'
+  | 'LAW'
+  | 'LANGUAGE'
+  | 'DATE'
+  | 'TIME'
+  | 'PERCENT'
+  | 'MONEY'
+  | 'QUANTITY'
+  | 'ORDINAL'
+  | 'CARDINAL';
+
+export interface IEntityEntry {
+  start: number;
+  end: number;
+  text: string;
+  type: TEntityTypes;
+}
+
+export interface IProcessedTextChunkEntry {
+  page_content: string;
+  metadata: Record<string, string>;
+  type: string;
+}
+
+export interface IApiRequestParameters {
+  pathname: string;
+  endpoint: string | undefined;
+  queries?: Record<string, string | string[] | undefined>;
+  body?: Record<string, string | string[] | string[][] | undefined>;
+}
+
+// nlp.chunk.html()
+export interface INaturalLanguageApis {
+  extractEntities: (params: IPromptMethodParameters) => Promise<IEntityEntry[]>;
+  chunk: {
+    html: (params: IChunkTextMethodParameters) => Promise<IProcessedTextChunkEntry[]>;
+    markdown: (params: IChunkTextMethodParameters) => Promise<IProcessedTextChunkEntry[]>;
+  }
 }
